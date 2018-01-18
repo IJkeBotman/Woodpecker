@@ -1,15 +1,211 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8HX-A6-Y9e">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Woodpecker-->
+        <scene sceneID="9sg-ph-azF">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Woodpecker" id="8HX-A6-Y9e" customClass="TasksInterfaceController" customModule="Woodpecker_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Add Task" id="NVh-0I-HrL">
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onNewTask" destination="8HX-A6-Y9e" id="5H4-Cb-y79"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="dij-V6-0ZU">
+                            <items>
+                                <tableRow identifier="OngoingTaskRow" id="4ki-aA-oUN" customClass="OngoingTaskRowController" customModule="Woodpecker_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="6" id="97H-Jw-uhu">
+                                        <items>
+                                            <group width="1" widthAdjustment="-12" alignment="center" id="54u-xz-U0q" userLabel="Label Group">
+                                                <items>
+                                                    <label alignment="left" verticalAlignment="center" text="Work Out" id="Ejo-qp-tsW"/>
+                                                    <label alignment="right" verticalAlignment="center" text="4/55" id="kYf-fe-nLG">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="1" height="10" alignment="right" spacing="0.0" id="PmA-ai-t81">
+                                                <items>
+                                                    <group width="0.22" height="1" alignment="right" id="sQJ-iZ-lDX">
+                                                        <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </group>
+                                                </items>
+                                                <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.22" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </group>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="97H-Jw-uhu" id="1TU-PB-gy0"/>
+                                        <outlet property="nameLabel" destination="Ejo-qp-tsW" id="A5i-yL-Sa1"/>
+                                        <outlet property="progressBackgroundGroup" destination="PmA-ai-t81" id="80M-hx-b54"/>
+                                        <outlet property="progressGroup" destination="sQJ-iZ-lDX" id="eLy-28-srx"/>
+                                        <outlet property="progressLabel" destination="kYf-fe-nLG" id="DXM-Vv-yBf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Completed" id="Ni3-Ev-mu6">
+                            <color key="textColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <table alignment="left" id="UFy-Jy-poi">
+                            <items>
+                                <tableRow identifier="CompletedTaskRow" selectable="NO" id="CbP-NR-cQ4" customClass="CompletedTaskRowController" customModule="Woodpecker_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="aZ9-hE-l28">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Work Out" id="Ytn-WI-eTn"/>
+                                            <label alignment="right" verticalAlignment="center" text="55/55" id="gS6-CK-mEr">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.22" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="group" destination="aZ9-hE-l28" id="JxG-sR-J0K"/>
+                                        <outlet property="nameLabel" destination="Ytn-WI-eTn" id="0ae-Ps-Jqc"/>
+                                        <outlet property="progressLabel" destination="gS6-CK-mEr" id="mQe-mk-yKu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="UGh-Y1-mWd">
+                        <items>
+                            <menuItem title="New Task" icon="add" id="8Vx-Jb-q9P">
+                                <connections>
+                                    <action selector="onNewTask" destination="8HX-A6-Y9e" id="kiP-dy-69c"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="addTaskButton" destination="NVh-0I-HrL" id="W35-YI-aCR"/>
+                        <outlet property="completedLabel" destination="Ni3-Ev-mu6" id="B02-WB-2gr"/>
+                        <outlet property="completedTable" destination="UFy-Jy-poi" id="cR4-M1-nWn"/>
+                        <outlet property="ongoingTable" destination="dij-V6-0ZU" id="8aY-ji-Wej"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="-165" y="486"/>
+        </scene>
+        <!--New Task-->
+        <scene sceneID="Rha-U3-Y2H">
+            <objects>
+                <controller identifier="NewTaskInterfaceController" title="New Task" hidesWhenLoading="NO" id="Bof-qe-BCI" customClass="NewTaskInterfaceController" customModule="Woodpecker_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="qBX-0S-6AU">
+                            <items>
+                                <button width="1" alignment="left" title="Add Name" id="wFR-Hx-k40">
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="addName" destination="Bof-qe-BCI" id="phE-Q3-atH"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.22" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <label alignment="left" text="Color" id="6wL-q1-FIv"/>
+                        <group width="1" alignment="left" layout="vertical" spacing="3" id="Lo3-2I-ibl">
+                            <items>
+                                <group width="1" alignment="left" id="fw2-TP-0lN">
+                                    <items>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="left" alpha="0.29999999999999999" id="EWa-A1-W8t">
+                                            <connections>
+                                                <action selector="onBlue" destination="Bof-qe-BCI" id="6nL-Cb-0Iy"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="right" alpha="0.29999999999999999" id="24p-vS-Xoq">
+                                            <connections>
+                                                <action selector="onGreen" destination="Bof-qe-BCI" id="O3B-q9-Hv6"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="center" alpha="0.29999999999999999" id="Uh4-b8-trs">
+                                            <connections>
+                                                <action selector="onPurple" destination="Bof-qe-BCI" id="lCF-gg-ea3"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="YS3-JU-7dC">
+                                    <items>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="left" alpha="0.29999999999999999" id="qZe-vW-UI7">
+                                            <connections>
+                                                <action selector="onOrange" destination="Bof-qe-BCI" id="T2k-19-cTA"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="right" alpha="0.29999999999999999" id="pu8-pf-Wfn">
+                                            <connections>
+                                                <action selector="onYellow" destination="Bof-qe-BCI" id="0ZF-xg-PBK"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.33000000000000002" widthAdjustment="-1" alignment="center" alpha="0.29999999999999999" id="imP-KS-V4d">
+                                            <connections>
+                                                <action selector="onRed" destination="Bof-qe-BCI" id="Rw7-Ue-wY8"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="nUf-Hq-UVA">
+                            <items>
+                                <label alignment="left" text="Times" id="H0Q-Il-qZZ"/>
+                                <label alignment="right" text="20" id="dih-3W-6Xu"/>
+                            </items>
+                        </group>
+                        <slider width="1" alignment="center" continuous="YES" value="20" minimum="1" maximum="50" steps="20" id="66l-D4-XFO">
+                            <connections>
+                                <action selector="onSliderChange:" destination="Bof-qe-BCI" id="8zY-rR-Cfu"/>
+                            </connections>
+                        </slider>
+                        <group width="1" alignment="left" layout="vertical" id="3zc-Yo-7po">
+                            <items>
+                                <imageView height="2" alignment="center" hidden="YES" image="x1" contentMode="center" initiallyAnimated="NO" id="YFe-fR-pon"/>
+                                <button width="1" alignment="left" title="Create" id="gze-rv-5Pa">
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="onCreate" destination="Bof-qe-BCI" id="dxO-cz-ZkJ"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Cancel" id="961-gH-YTH">
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="onCancel" destination="Bof-qe-BCI" id="tI9-6d-0Yl"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="addNameButton" destination="wFR-Hx-k40" id="lME-7s-86D"/>
+                        <outlet property="addNameGroup" destination="qBX-0S-6AU" id="8Pw-La-wKd"/>
+                        <outlet property="blueButton" destination="EWa-A1-W8t" id="2oo-7n-PAQ"/>
+                        <outlet property="bottomGroup" destination="3zc-Yo-7po" id="ZeD-JC-A3D"/>
+                        <outlet property="cancelButton" destination="961-gH-YTH" id="dRx-RK-7A0"/>
+                        <outlet property="colorLabel" destination="6wL-q1-FIv" id="3rE-HI-TjQ"/>
+                        <outlet property="createButton" destination="gze-rv-5Pa" id="Se2-4K-i35"/>
+                        <outlet property="errorImage" destination="YFe-fR-pon" id="joP-ZI-pFD"/>
+                        <outlet property="greenButton" destination="24p-vS-Xoq" id="Dmz-kY-n3R"/>
+                        <outlet property="orangeButton" destination="qZe-vW-UI7" id="S0f-TG-0eM"/>
+                        <outlet property="purpleButton" destination="Uh4-b8-trs" id="iZ3-Aj-CAD"/>
+                        <outlet property="redButton" destination="imP-KS-V4d" id="5X1-U7-aia"/>
+                        <outlet property="timesLabel" destination="H0Q-Il-qZZ" id="wO2-1U-wRq"/>
+                        <outlet property="timesSelectedLabel" destination="dih-3W-6Xu" id="kd0-GE-56G"/>
+                        <outlet property="timesSlider" destination="66l-D4-XFO" id="aiO-Z2-YSY"/>
+                        <outlet property="yellowButton" destination="pu8-pf-Wfn" id="Fo8-4s-vah"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="45" y="486"/>
         </scene>
     </scenes>
 </document>

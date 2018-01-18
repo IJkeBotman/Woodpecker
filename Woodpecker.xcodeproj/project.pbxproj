@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0A62BE8320113F7400DC8DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BE8220113F7400DC8DD6 /* AppDelegate.swift */; };
-		0A62BE8520113F7400DC8DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BE8420113F7400DC8DD6 /* ViewController.swift */; };
 		0A62BE8820113F7400DC8DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BE8620113F7400DC8DD6 /* Main.storyboard */; };
 		0A62BE8A20113F7400DC8DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BE8920113F7400DC8DD6 /* Assets.xcassets */; };
 		0A62BE8D20113F7400DC8DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BE8B20113F7400DC8DD6 /* LaunchScreen.storyboard */; };
@@ -16,9 +15,23 @@
 		0A62BE9820113F7400DC8DD6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BE9620113F7400DC8DD6 /* Interface.storyboard */; };
 		0A62BE9A20113F7400DC8DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BE9920113F7400DC8DD6 /* Assets.xcassets */; };
 		0A62BEA120113F7500DC8DD6 /* Woodpecker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A62BEA020113F7500DC8DD6 /* Woodpecker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0A62BEA620113F7500DC8DD6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEA520113F7500DC8DD6 /* InterfaceController.swift */; };
 		0A62BEA820113F7500DC8DD6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEA720113F7500DC8DD6 /* ExtensionDelegate.swift */; };
 		0A62BEAA20113F7500DC8DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A62BEA920113F7500DC8DD6 /* Assets.xcassets */; };
+		0A62BEBB20113FD400DC8DD6 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEBA20113FD400DC8DD6 /* TasksViewController.swift */; };
+		0A62BEC02011403300DC8DD6 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEBF2011403300DC8DD6 /* ProgressView.swift */; };
+		0A62BEC22011405100DC8DD6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEC12011405100DC8DD6 /* TaskCell.swift */; };
+		0A62BEC42011406300DC8DD6 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEC32011406300DC8DD6 /* ColorCell.swift */; };
+		0A62BEC62011407A00DC8DD6 /* NewTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEC52011407A00DC8DD6 /* NewTaskCell.swift */; };
+		0A62BECB201140BD00DC8DD6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECA201140BD00DC8DD6 /* Task.swift */; };
+		0A62BECD201140D600DC8DD6 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECC201140D600DC8DD6 /* TaskList.swift */; };
+		0A62BECF201140F300DC8DD6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECE201140F300DC8DD6 /* Theme.swift */; };
+		0A62BED0201140FC00DC8DD6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECE201140F300DC8DD6 /* Theme.swift */; };
+		0A62BED1201140FF00DC8DD6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECA201140BD00DC8DD6 /* Task.swift */; };
+		0A62BED22011410100DC8DD6 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BECC201140D600DC8DD6 /* TaskList.swift */; };
+		0A62BED62011422C00DC8DD6 /* TasksInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BED52011422C00DC8DD6 /* TasksInterfaceController.swift */; };
+		0A62BED82011425100DC8DD6 /* NewTaskInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BED72011425100DC8DD6 /* NewTaskInterfaceController.swift */; };
+		0A62BEDA2011428000DC8DD6 /* OngoingTaskRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BED92011428000DC8DD6 /* OngoingTaskRowController.swift */; };
+		0A62BEDC2011429800DC8DD6 /* CompletedTaskRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A62BEDB2011429800DC8DD6 /* CompletedTaskRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +79,6 @@
 /* Begin PBXFileReference section */
 		0A62BE7F20113F7400DC8DD6 /* Woodpecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Woodpecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A62BE8220113F7400DC8DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A62BE8420113F7400DC8DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A62BE8720113F7400DC8DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A62BE8920113F7400DC8DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A62BE8C20113F7400DC8DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,10 +88,21 @@
 		0A62BE9920113F7400DC8DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A62BE9B20113F7400DC8DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A62BEA020113F7500DC8DD6 /* Woodpecker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Woodpecker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A62BEA520113F7500DC8DD6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		0A62BEA720113F7500DC8DD6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0A62BEA920113F7500DC8DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A62BEAB20113F7500DC8DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A62BEBA20113FD400DC8DD6 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		0A62BEBF2011403300DC8DD6 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		0A62BEC12011405100DC8DD6 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		0A62BEC32011406300DC8DD6 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		0A62BEC52011407A00DC8DD6 /* NewTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskCell.swift; sourceTree = "<group>"; };
+		0A62BECA201140BD00DC8DD6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0A62BECC201140D600DC8DD6 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		0A62BECE201140F300DC8DD6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0A62BED52011422C00DC8DD6 /* TasksInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksInterfaceController.swift; sourceTree = "<group>"; };
+		0A62BED72011425100DC8DD6 /* NewTaskInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskInterfaceController.swift; sourceTree = "<group>"; };
+		0A62BED92011428000DC8DD6 /* OngoingTaskRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingTaskRowController.swift; sourceTree = "<group>"; };
+		0A62BEDB2011429800DC8DD6 /* CompletedTaskRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTaskRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +126,7 @@
 		0A62BE7620113F7400DC8DD6 = {
 			isa = PBXGroup;
 			children = (
+				0A62BEC72011409200DC8DD6 /* Shared */,
 				0A62BE8120113F7400DC8DD6 /* Woodpecker */,
 				0A62BE9520113F7400DC8DD6 /* Woodpecker WatchKit App */,
 				0A62BEA420113F7500DC8DD6 /* Woodpecker WatchKit Extension */,
@@ -123,12 +147,9 @@
 		0A62BE8120113F7400DC8DD6 /* Woodpecker */ = {
 			isa = PBXGroup;
 			children = (
-				0A62BE8220113F7400DC8DD6 /* AppDelegate.swift */,
-				0A62BE8420113F7400DC8DD6 /* ViewController.swift */,
-				0A62BE8620113F7400DC8DD6 /* Main.storyboard */,
-				0A62BE8920113F7400DC8DD6 /* Assets.xcassets */,
-				0A62BE8B20113F7400DC8DD6 /* LaunchScreen.storyboard */,
 				0A62BE8E20113F7400DC8DD6 /* Info.plist */,
+				0A62BEB920113FBF00DC8DD6 /* Classes */,
+				0A62BEBD2011400100DC8DD6 /* Resources */,
 			);
 			path = Woodpecker;
 			sourceTree = "<group>";
@@ -146,12 +167,96 @@
 		0A62BEA420113F7500DC8DD6 /* Woodpecker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0A62BEA520113F7500DC8DD6 /* InterfaceController.swift */,
+				0A62BED32011420300DC8DD6 /* Controllers */,
+				0A62BED42011420C00DC8DD6 /* Row Controllers */,
 				0A62BEA720113F7500DC8DD6 /* ExtensionDelegate.swift */,
 				0A62BEA920113F7500DC8DD6 /* Assets.xcassets */,
 				0A62BEAB20113F7500DC8DD6 /* Info.plist */,
 			);
 			path = "Woodpecker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		0A62BEB920113FBF00DC8DD6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BEBE2011402500DC8DD6 /* Views */,
+				0A62BE8220113F7400DC8DD6 /* AppDelegate.swift */,
+				0A62BE8620113F7400DC8DD6 /* Main.storyboard */,
+				0A62BEBC20113FE000DC8DD6 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A62BEBC20113FE000DC8DD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BEBA20113FD400DC8DD6 /* TasksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A62BEBD2011400100DC8DD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BE8920113F7400DC8DD6 /* Assets.xcassets */,
+				0A62BE8B20113F7400DC8DD6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0A62BEBE2011402500DC8DD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BEBF2011403300DC8DD6 /* ProgressView.swift */,
+				0A62BEC12011405100DC8DD6 /* TaskCell.swift */,
+				0A62BEC32011406300DC8DD6 /* ColorCell.swift */,
+				0A62BEC52011407A00DC8DD6 /* NewTaskCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A62BEC72011409200DC8DD6 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BEC9201140A100DC8DD6 /* Helpers */,
+				0A62BEC82011409900DC8DD6 /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0A62BEC82011409900DC8DD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BECA201140BD00DC8DD6 /* Task.swift */,
+				0A62BECC201140D600DC8DD6 /* TaskList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A62BEC9201140A100DC8DD6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BECE201140F300DC8DD6 /* Theme.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0A62BED32011420300DC8DD6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BED52011422C00DC8DD6 /* TasksInterfaceController.swift */,
+				0A62BED72011425100DC8DD6 /* NewTaskInterfaceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0A62BED42011420C00DC8DD6 /* Row Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A62BED92011428000DC8DD6 /* OngoingTaskRowController.swift */,
+				0A62BEDB2011429800DC8DD6 /* CompletedTaskRowController.swift */,
+			);
+			path = "Row Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +394,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A62BE8520113F7400DC8DD6 /* ViewController.swift in Sources */,
+				0A62BECF201140F300DC8DD6 /* Theme.swift in Sources */,
+				0A62BECD201140D600DC8DD6 /* TaskList.swift in Sources */,
+				0A62BEC22011405100DC8DD6 /* TaskCell.swift in Sources */,
 				0A62BE8320113F7400DC8DD6 /* AppDelegate.swift in Sources */,
+				0A62BEBB20113FD400DC8DD6 /* TasksViewController.swift in Sources */,
+				0A62BEC62011407A00DC8DD6 /* NewTaskCell.swift in Sources */,
+				0A62BEC42011406300DC8DD6 /* ColorCell.swift in Sources */,
+				0A62BECB201140BD00DC8DD6 /* Task.swift in Sources */,
+				0A62BEC02011403300DC8DD6 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +410,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A62BED1201140FF00DC8DD6 /* Task.swift in Sources */,
+				0A62BEDA2011428000DC8DD6 /* OngoingTaskRowController.swift in Sources */,
+				0A62BED22011410100DC8DD6 /* TaskList.swift in Sources */,
+				0A62BEDC2011429800DC8DD6 /* CompletedTaskRowController.swift in Sources */,
+				0A62BED82011425100DC8DD6 /* NewTaskInterfaceController.swift in Sources */,
+				0A62BED62011422C00DC8DD6 /* TasksInterfaceController.swift in Sources */,
+				0A62BED0201140FC00DC8DD6 /* Theme.swift in Sources */,
 				0A62BEA820113F7500DC8DD6 /* ExtensionDelegate.swift in Sources */,
-				0A62BEA620113F7500DC8DD6 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.overscope.Woodpecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -553,7 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.overscope.Woodpecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
