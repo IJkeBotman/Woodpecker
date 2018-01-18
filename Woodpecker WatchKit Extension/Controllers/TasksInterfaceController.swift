@@ -50,8 +50,16 @@ extension TasksInterfaceController {
         let task = tasks.ongoingTasks[rowIndex]
         tasks.didTask(task)
         if (task.isCompleted) {
-            loadOngoingTasks()
-            loadCompletedTasks()
+            ongoingTable.removeRows(at: IndexSet(integer: rowIndex))
+            let newRowIndex = tasks.completedTasks.count - 1
+            completedTable.insertRows(at: IndexSet(integer: newRowIndex), withRowType: CompletedTaskRowController.RowType)
+            
+            let row = completedTable.rowController(at: newRowIndex) as! CompletedTaskRowController
+            row.populate(with: task)
+            
+            self.updateAddTaskButton()
+            self.updateCompletedLabel()
+            self.completedTable.scrollToRow(at: newRowIndex)
         }
         else {
             let row = ongoingTable.rowController(at: rowIndex) as! OngoingTaskRowController
@@ -76,7 +84,11 @@ extension TasksInterfaceController {
     
     func updateOngoingTasksIfNeeded() {
         if ongoingTable.numberOfRows < tasks.ongoingTasks.count {
-            loadOngoingTasks()
+            let newRowIndex = tasks.ongoingTasks.count - 1
+            ongoingTable.insertRows(at: IndexSet(integer: newRowIndex), withRowType: OngoingTaskRowController.RowType)
+            
+            let row = ongoingTable.rowController(at: newRowIndex) as! OngoingTaskRowController
+            row.populate(with: tasks.ongoingTasks.last!, frameWidth: contentFrame.size.width)
             
             saveTasks()
             updateAddTaskButton()
@@ -100,6 +112,12 @@ extension TasksInterfaceController {
     
     func updateAddTaskButton() {
         addTaskButton.setHidden(ongoingTable.numberOfRows != 0)
+        if (ongoingTable.numberOfRows == 0) {
+            addTaskButton.setAlpha(0)
+            animate(withDuration: 0.4, animations: {
+                self.addTaskButton.setAlpha(1)
+            })
+        }
     }
 }
 
